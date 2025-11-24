@@ -403,7 +403,8 @@ textarea {
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgb(0 123 255 / 25%)
+    box-shadow: 0 0 0 .2rem rgb(0 123 255 / 25%);
+    caret-color: auto;
 }
 
 html {
@@ -468,7 +469,14 @@ img {
     border: 3px solid #ffffff60;
     border-radius: 200px;
     position: relative;
-    padding: 4px
+    padding: 4px;
+}
+
+.box-profile .prf-img div.rounded-circle {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 4px solid #fff;
 }
 
 .box-profile .prf-img img {
@@ -476,6 +484,12 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover
+}
+
+.box-profile .prf-img img:hover {
+    transform: scale(1.1);
+    transition: transform .15s ease;
+    cursor: no-drop;
 }
 
 .prf-name-bar {
@@ -678,10 +692,6 @@ footer {
     padding: 3px;
     background: #ef8714;
     background: linear-gradient(-30deg, #ef8714 0, #eb7d23 20%, #9b3e9b 80%, #5847a3 100%)
-}
-
-.page-profile--header .prf-img img {
-    border: 4px solid #fff
 }
 
 .page-profile--header .box-profile .prf-social {

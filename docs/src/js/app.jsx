@@ -161,10 +161,12 @@ class App extends React.Component {
                     <div className="box-profile ">
                         <div className="box-profile-left">
                             <div className="prf-img">
-                                <img className="rounded-circle lazyloaded"
-                                    data-src="uploads/avatar.jpeg"
-                                    alt=""
-                                    src="uploads/avatar.jpeg" />
+                                <div className="rounded-circle">
+                                    <img className="rounded-circle lazyloaded"
+                                        data-src="uploads/avatar.jpeg"
+                                        alt=""
+                                        src="uploads/avatar.jpeg" />
+                                </div>
                             </div>
                         </div>
                         <div className="box-profile-middle ">
