@@ -18,12 +18,6 @@ This repository hosts the front‑end source code and data backup for the person
 # Clone the repository
 git clone https://github.com/paduvi/hoctusangdentoi.git
 cd hoctusangdentoi
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
 ```
 
 **Build for Production**
