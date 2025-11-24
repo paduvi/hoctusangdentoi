@@ -15,7 +15,7 @@ const createQuery = (cursor) => {
     query ${dynamicQueryName} {
       publication(host: "${HASHNODE_HOST}") {
         title
-        posts(first: 20 ${afterParam}) {
+        posts(first: 12 ${afterParam}) {
           pageInfo {
             hasNextPage
             endCursor
@@ -78,12 +78,14 @@ class App extends React.Component {
     }
 
     async loadInitialProductList() {
-        let allEdges = [];      // Contains the entire raw article retrieved
         let hasNextPage = true; // Flag to mark next page
         let endCursor = null;   // The cursor marks the position of the last card taken.
+        let products = [];
 
         try {
-            // Vòng lặp lấy dữ liệu (Pagination Loop)
+            const categories = {}
+
+            // Pagination Loop
             while (hasNextPage) {
                 const query = createQuery(endCursor);
 
@@ -101,21 +103,31 @@ class App extends React.Component {
 
                 const postsData = json.data.publication.posts;
 
-                // 1. Collect newly obtained articles into a common array
-                allEdges = [...allEdges, ...postsData.edges];
-
-                // 2. Update pagination status
+                // Update pagination status
                 hasNextPage = postsData.pageInfo.hasNextPage;
                 endCursor = postsData.pageInfo.endCursor;
+
+                // Collect newly obtained articles into a common array
+                products = [...products, ...mapPostsToProducts(postsData.edges)];
+
+                // Iterate over the rows
+                products.forEach(product => product.categories.forEach(cat => categories[cat] = 1));
+
+                // Render partial products
+                this.setState({
+                    products: products
+                });
             }
 
-            const products = mapPostsToProducts(allEdges);
-            const categories = {}
-            // Iterate over the rows
-            products.forEach(product => product.categories.forEach(cat => categories[cat] = 1));
-
             // Set the products in the component state
-            this.setState({ ready: true, products: products, categories: Object.keys(categories) });
+            this.setState({
+                ready: true,
+                products: products,
+                categories: Object.keys(categories).sort((a, b) => {
+                    if (a.length !== b.length) return a.length - b.length;
+                    return a.localeCompare(b);
+                })
+            });
         } catch (error) {
             console.error('Error loading initial product list:', error);
         }
@@ -216,7 +228,7 @@ class App extends React.Component {
                             </div>
                             <div className="profile-tabs--group">
                                 <div className="profile-tabs--listgrid">
-                                    {ready ? filteredProducts.map(product => (
+                                    {filteredProducts.map(product => (
                                         <div key={product.id} className="tabs--listgrid-item">
                                             <a target="_blank" className="listgrid--link" href={product.url}>
                                                 <div className="listgrid--linkbody">
@@ -233,7 +245,8 @@ class App extends React.Component {
                                                 </div>
                                             </a>
                                         </div>
-                                    )) : Array.from({ length: 4 }, (_, index) => index + 1).map(index => (
+                                    ))}
+                                    {!ready && Array.from({ length: 4 }, (_, index) => index + 1).map(index => (
                                         <div key={-index} className="tabs--listgrid-item">
                                             <span className="listgrid--link shimmerBG">
                                                 <div className="listgrid--linkbody">

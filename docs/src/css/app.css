@@ -147,6 +147,10 @@ h5 {
     font-size: 1.25rem
 }
 
+.no-caret {
+    caret-color: transparent;
+}
+
 .list-unstyled {
     padding-left: 0;
     list-style: none
@@ -767,7 +771,23 @@ footer {
     flex-direction: column;
     box-shadow: 0 .0625rem .125rem 0 rgb(0 0 0 / 10%);
     background: #efeff68c;
-    height: 100%
+    height: 100%;
+    transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.tabs--listgrid-item:hover {
+    background-color: #efeff6;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+    cursor: pointer;
+}
+
+.tabs--listgrid-item:hover .listgrid--img {
+    overflow: hidden;
+}
+
+.tabs--listgrid-item:hover img {
+    transform: scale(1.05);
+    transition: transform .15s ease;
 }
 
 .tabs--listgrid-item .img-fluid {

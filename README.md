@@ -1,4 +1,36 @@
 # Học từ sáng đến tối
 
-This project contains frontend source code and data backup for hoctusangdentoi.thanhhao.me.
-It currently connects to the headless CMS backend by Hashnode.
+**Project Overview**
+
+This repository hosts the front‑end source code and data backup for the personal website **hoctusangdentoi.thanhhao.me**. The application is built with React and vanilla CSS, fetching content from the Hashnode headless CMS via GraphQL.
+
+**Key Features**
+- Dynamic retrieval of blog posts and categories from Hashnode.
+- Responsive, modern UI with loading placeholders (shimmer effect).
+- Automated build pipeline that bundles JavaScript with esbuild and minifies CSS.
+
+**Prerequisites**
+- Node.js (v14 or later)
+- npm (comes with Node)
+
+**Setup & Development**
+```bash
+# Clone the repository
+git clone https://github.com/paduvi/hoctusangdentoi.git
+cd hoctusangdentoi
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+**Build for Production**
+```bash
+# Generate minified assets in the `docs/dist` folder
+./build_dist.bat
+```
+
+**License**
+This project is licensed under the MIT License.
