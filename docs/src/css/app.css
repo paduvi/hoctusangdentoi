@@ -535,7 +535,13 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: middle;
-    margin-right: 4px
+    margin-right: 4px;
+}
+
+.prf-social .prf-icon:hover {
+    transform: scale(1.1);
+    transition: transform .15s ease;
+    cursor: pointer;
 }
 
 .lazyloaded .prf-icon.icon-ytb-circle {
