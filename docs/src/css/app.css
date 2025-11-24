@@ -118,7 +118,9 @@ input {
 [type=submit],
 button,
 html [type=button] {
-    -webkit-appearance: button
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
 }
 
 .h1,
@@ -387,7 +389,9 @@ textarea {
 
 [type=search] {
     outline-offset: -2px;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .form-control:focus {
@@ -569,7 +573,9 @@ footer {
     input:not([type=radio]):not([type=checkbox]),
     select,
     textarea {
-        -webkit-appearance: none
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
     }
 
     #layout-wrapper {
@@ -802,6 +808,7 @@ footer {
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     letter-spacing: -.2px
 }
 
@@ -866,6 +873,7 @@ footer {
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     letter-spacing: -.2px
 }
 
@@ -1029,7 +1037,8 @@ footer {
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translateY(-50%) translateX(-50%)
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
 .ml-box-profile {
@@ -1124,6 +1133,7 @@ footer {
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     height: 36px;
     letter-spacing: -.2px
 }
@@ -1133,7 +1143,8 @@ footer {
     width: 100%;
     height: 100%;
     margin-top: -30px;
-    -webkit-transform: scaleY(.9)
+    -webkit-transform: scaleY(.9);
+    transform: scaleY(.9);
 }
 
 @media (max-width:767px) {
@@ -1523,6 +1534,7 @@ input[type=search].form-control:focus {
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     margin-bottom: 5px;
     font-weight: 600;
     font-size: 14px;
