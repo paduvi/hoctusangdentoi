@@ -23,7 +23,10 @@ cd hoctusangdentoi
 **Build for Production**
 ```bash
 # Generate minified assets in the `docs/dist` folder
+# On Windows
 ./build_dist.bat
+# On Linux/Mac
+./build_dist.sh
 ```
 
 **License**

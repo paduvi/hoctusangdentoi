@@ -25,15 +25,12 @@ if %errorlevel% neq 0 (
 )
 
 echo Minifying CSS...
-pwsh -ExecutionPolicy Bypass -File minify_css.ps1
+call npx esbuild docs/src/css/app.css --minify --outfile=docs/dist/css/app.min.css
 
 if %errorlevel% neq 0 (
     echo Error minifying CSS.
     pause
     exit /b %errorlevel%
 )
-
-echo Moving CSS to dist...
-move /Y "docs\src\css\app.min.css" "docs\dist\css\app.min.css"
 
 echo Done.
