@@ -1,0 +1,15 @@
+# Robots.txt for hoctusangdentoi.thanhhao.me
+# https://www.robotstxt.org/
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Disallow access to admin and private directories (if any)
+Disallow: /plugins/
+Disallow: /themes/
+Disallow: /dist/
+Disallow: /src/
+
+# Sitemap location
+Sitemap: https://hoctusangdentoi.thanhhao.me/sitemap.xml
