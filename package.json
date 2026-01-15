@@ -4,9 +4,9 @@
     "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.5",
     "@babel/preset-react": "^7.28.5",
-    "esbuild": "^0.27.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "esbuild": "^0.27.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "uglify-js": "^3.19.3"
   }
 }

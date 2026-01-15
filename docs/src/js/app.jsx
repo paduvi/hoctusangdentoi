@@ -185,7 +185,7 @@ class App extends React.Component {
                                 </div>
                             </div>
                             <div className="prf-info">
-                                <p className="mb-2">Đồng hành cùng quãng thời gian nỗ lực của 2 đứa</p>
+                                <p className="mb-2">Timelapse mèo chạy quanh</p>
                             </div>
                         </div>
                     </div>
