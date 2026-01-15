@@ -4,6 +4,7 @@ datePublished: Thu Jan 15 2026 12:38:21 GMT+0000 (Coordinated Universal Time)
 cuid: cmkffqyl8000202l87eqb206k
 slug: ao-cho-meo-thu-cung-mua-dong-ao-nhung-long-3-mau
 canonical: https://s.shopee.vn/AAAvhjkMpE
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1768480866590/37c78eac-1cc6-4906-9e5d-f4dcc011328f.jpeg
 tags: meo
 
 ---
