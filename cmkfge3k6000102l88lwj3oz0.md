@@ -1,0 +1,20 @@
+---
+title: "Áo Ba Lỗ Áo Lông Cừu Mẫu Cây Kem Ốc Quế Cho Thú Cưng"
+datePublished: Thu Jan 15 2026 12:56:21 GMT+0000 (Coordinated Universal Time)
+cuid: cmkfge3k6000102l88lwj3oz0
+slug: ao-ba-lo-ao-long-cuu-mau-cay-kem-oc-que-cho-thu-cung
+canonical: https://s.shopee.vn/8pfY9G2AbN
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1768481699878/187efd75-bd0f-4259-9b34-189a9a9f3aa1.jpeg
+tags: meo
+
+---
+
+XS 0.5kg-1.5kg
+
+S 1.5kg-3kg
+
+M 3kg-5kg
+
+L 5kg-7kg
+
+XL &lt;10kg
